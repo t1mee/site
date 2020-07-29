@@ -1,0 +1,80 @@
+doctype html
+
+- var css_dir = "/css"
+- var js_dir = "/js"
+- var img_dir = "/img"
+
+- var title = ""
+- var main_js = ""
+- var body_class = ""
+- var css_list = ["vars", "main", "navbar"]
+
+- var github_link = "https://github.com/pikvm/pikvm"
+- var discord_link = "https://discord.gg/bpmXfz5"
+- var reddit_link = "https://reddit.com/r/pikvm"
+- var preorder_link = "https://docs.google.com/forms/d/1LA6iEYVtbJULvMDNktyNQMI4N9SYdNG03Wh9WK-80cM"
+- var email_link = "mailto:mdevaev@gmail.com"
+
+mixin li(short)
+	li #[b #{short}]#[br]
+		block
+
+mixin img(name, width, link="")
+	a(target="_blank" href=(link ? link : `${img_dir}/${name}`))
+		img(src=`${img_dir}/${name}` width=`${width}px`)
+
+block vars
+
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title #{title}
+
+		link(rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png")
+		link(rel="manifest" href="/site.webmanifest")
+		link(rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5")
+		meta(name="msapplication-TileColor" content="#2b5797")
+		meta(name="theme-color" content="#ffffff")
+
+		meta(data-n-head="ssr" property="og:description" content="Pi-KVM an easy and cheap DIY IP-KVM on Raspberry Pi to control remote machines")
+		meta(data-n-head="ssr" property="og:image" content="https://pikvm.org/img/logo.png")
+		meta(data-n-head="ssr" property="og:url" content="https://pikvm.org.com")
+		meta(data-n-head="ssr" data-hid="og:title" property="og:title" content=title)
+		link(data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico")
+
+		each name in css_list
+			link(rel="stylesheet" href=`${css_dir}/${name}.css`)
+
+		if main_js
+			script(type="module")
+				| import {main} from "#{js_dir}/#{main_js}.js";
+				| main();
+
+	body
+		ul(class="navbar")
+			li(class="left")
+				a(class="logo" href="/")
+					img(class="svg-gray" src=`${img_dir}/site.svg` alt="Pi-KVM")
+			li(class="left")
+				a(class="link important" target="_blank" href=github_link) Make Pi-KVM
+			li(class="left")
+				a(class="link" href="/donate.html") Donate
+			li(class="left")
+				a(class="link" target="_blank" href=discord_link) Discord server
+			// li(class="left")
+				a(class="link" target="_blank" href=reddit_link) Reddit
+			li(class="right")
+				a(class="link important" target="_blank" href=preorder_link) Pre-order device
+			li(class="right")
+				a(class="link" href=email_link) Email us
+
+		block body
+
+		ul(class="footer")
+			li(class="left")
+				| Development would be impossible without#[br]
+				| the #[a(href="/donate.html") financial support of the community].
+			li(class="right")
+				| The site design was inspirited by Rusjp's work
