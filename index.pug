@@ -15,8 +15,8 @@ block body
 						| #[br]#[br]
 						| This device helps to manage servers or workstations remotely, regardless of the health of the
 						| operating system or whether one is installed.
-						| You can fix any problem, configure the BIOS, or even reinstall the OS using the included
-						| CD-ROM or Flash Drive emulation.
+						| You can fix any problem, configure the BIOS, and even reinstall the OS using the virtual
+						| CD-ROM or Flash Drive.
 						| #[br]#[br]
 						| #[b It only costs between $30 and $100] depending on the features desired.
 						| Even the most expensive configuration will be cheaper than a $500 commercial IP-KVM.
@@ -45,6 +45,9 @@ block body
 					td
 						| Access via #[b VNC], #[b IPMI BMC] support, #[b Wake-on-LAN] server, advanced #[b authorization] and #[b SSL] encryption.
 						| This is just a short list of what Pi-KVM can do out of the box.
+			a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
+				div
+					| DIY Getting Started
 			hr
 			table
 				tr
@@ -74,7 +77,10 @@ block body
 				tr
 					td #[+img("v3-board-2.jpg", 300)]
 			br
-			h3 #[a(target="_blank" href=preorder_link) Subscribe in this form] and we'll let you know when you can purchase the board.#[br]
+			a(target="_blank" href=preorder_link class="clickable")
+				div
+					| Subscribe for Pre-order
+			h3 ... and we'll let you know when you can purchase the board.#[br]
 			| Prototypes will be ready in Q4 2020, and pre-orders will be available sooner.#[br]
 			| If you are considering ordering a wholesale lot, please #[a(href=email_link) email].
 			br
@@ -90,8 +96,7 @@ block body
 			div(class="text-left")
 				ul
 					+li("Easy to build")
-						| A ready-to-use OS that can be created just by running #[i make build] and installed to an SD-card
-						| using #[i make install]. The hardware can be made in half an hour and without soldering.
+						| A ready-to-use OS images and friendly build environment. The hardware can be made in half an hour and without soldering.
 					+li("Very low video latency")
 						| ~100 milliseconds of video latency. This is the smallest delay of all existing solutions.
 					+li("Extra lightweight Web UI and VNC")
@@ -157,3 +162,16 @@ block body
 						|  written in C with multi-threading support and GPU video encoding - the fastest streaming solution available
 						| to provide the best video quality for Pi-KVM. We also tested a lot of hardware configurations
 						|  so that you can be sure devices you assemble will work reliably.
+
+		div(class="block")
+			div(class="text-left")
+				table
+					tr
+						td
+							a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
+								div
+									| DIY Getting Started
+						td
+							a(target="_blank" href=preorder_link class="clickable")
+								div
+									| Subscribe for the Device Pre-order

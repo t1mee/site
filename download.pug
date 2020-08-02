@@ -1,0 +1,29 @@
+extends base.pug
+
+append vars
+	- title = "Pi-KVM / Download - Open and cheap DIY IP-KVM on Raspberry Pi"
+
+block body
+	div(class="content")
+		div(class="block text-left")
+			h3 Here you can find ready-made Pi-KVM images for Raspberry Pi
+			hr
+			| Download the appropriate memory card image for the #[a(target="_blank" href="https://github.com/pikvm/pikvm") Pi-KVM].
+			| Select the image by the #[a(target="_blank" href=`${github_link}#required-hardware`) board, platform],
+			| and the video capture device you are using.
+			| #[br]#[br]
+			| Minimum 16 Gb memory card class 10 is strongly recommended.
+			hr
+			h3 #[b Raspberry Pi 4], #[b v2] platform:
+			ul
+				li
+					| For HDMI-to-CSI bridge: #[a(href="/images/v2-hdmi-rpi4.img.bz2") #[b v2-hdmi-rpi4.img.bz2]]
+					| [#[a(href="/images/v2-hdmi-rpi4.img.bz2.sha1") SHA-1]]
+				li
+					| For HDMI-to-USB dongle: #[a(href="/images/v2-hdmiusb-rpi4.img.bz2") #[b v2-hdmiusb-rpi4.img.bz2]]
+					| [#[a(href="/images/v2-hdmiusb-rpi4.img.bz2.sha1") SHA-1]]
+			| To flash the image #[a(target="_blank" href=`${github_link}/blob/master/pages/flashing_os.md`) follow the instructions].
+			hr
+			| Right now, pre-compiled images are only available for the Raspberry Pi 4.
+			| In all other cases, you will need to build the operating system yourself. But don't worry,
+			| it's #[a(target="_blank" href=`${github_link}/blob/master/pages/building_os.md`) very simple].

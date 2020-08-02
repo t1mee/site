@@ -5,6 +5,7 @@ all:
 
 pug:
 	~/.npm-packages/bin/pug --pretty index.pug
+	~/.npm-packages/bin/pug --pretty download.pug
 	~/.npm-packages/bin/pug --pretty donate.pug
 
 upload:
