@@ -24,7 +24,10 @@ block body
 			hr
 			table
 				tr
-					td(colspan="4") #[b Here some examples from us and our happy users!]
+					td(colspan="4")
+						b
+							| Here some examples from us and our happy users.
+							| And the #[a(target="_blank" href="https://www.youtube.com/watch?v=9YhPWjWv5gw") video demo]!
 				tr
 					each index in [1, 2, 3, 4]
 						td #[+img(`diy-${index}.jpg`, 200)]
