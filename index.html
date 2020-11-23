@@ -10,9 +10,9 @@
     <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
-    <meta data-n-head="ssr" property="og:description" content="Pi-KVM an easy and cheap DIY IP-KVM on Raspberry Pi to control remote machines: Full HD, mouse, Mass Storage Drive, VNC, IPMI and much more out of the box">
+    <meta data-n-head="ssr" property="og:description" content="Pi-KVM an easy and cheap DIY IP-KVM on Raspberry Pi to control remote machines: Full HD, mouse, Mass Storage Drive, VNC, IPMI and much more out of the box. Most modern KVM over IP ever!">
     <meta data-n-head="ssr" property="og:image" content="https://pikvm.org/img/logo.png">
-    <meta data-n-head="ssr" property="og:url" content="https://pikvm.org.com">
+    <meta data-n-head="ssr" property="og:url" content="https://pikvm.org">
     <meta data-n-head="ssr" data-hid="og:title" property="og:title" content="Pi-KVM - Open and cheap DIY IP-KVM on Raspberry Pi">
     <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/vars.css">
@@ -36,7 +36,7 @@
         <h2>Pi-KVM - Open and cheap DIY IP-KVM on Raspberry Pi</h2>
         <table>
           <tr>
-            <td class="text-left">A very simple and fully functional Raspberry Pi-based <b>IP-KVM</b> that <b>you can make with your own hands</b>
+            <td class="text-left">A very simple and fully functional Raspberry Pi-based <b>KVM over IP</b> that <b>you can make with your own hands</b>
               without any soldering!
               <br><br>
               This device helps to manage servers or workstations remotely, regardless of the health of the
@@ -54,9 +54,10 @@
         <hr>
         <table>
           <tr>
-            <td colspan="4"><b>
-                Here some examples from us and our happy users.
-                And the <a target="_blank" href="https://www.youtube.com/watch?v=9YhPWjWv5gw">video demo</a>!</b></td>
+            <td colspan="4"><b>Great project review by Novaspirit Tech: <a target="_blank" href="https://youtu.be/plP9Y1likRg">YouTube</a></b><br>
+              Boring technical details from us: <a target="_blank" href="https://youtu.be/9YhPWjWv5gw">YouTube</a><br>
+              And here some examples from us and our happy users.
+            </td>
           </tr>
           <tr>
             <td><a target="_blank" href="/img/diy-1.jpg"><img src="/img/diy-1.jpg" width="200px"></a>
@@ -85,7 +86,7 @@
             <td>There are many ways to build a Pi-KVM. <b>Raspberry Pi</b> models <b>2, 3, 4, or ZeroW</b> may be used.
               Video capture devices can be attached using the <b>CSI-2</b> or <b>USB</b> interfaces.
             </td>
-            <td>Access via <b>Web UI</b> and <b>VNC</b>, <b>IPMI BMC</b> and <b>Redfish</b> support,
+            <td>Access via <b>Web UI</b> and <b>VNC</b>, <b>IPMI BMC/SoL</b> and <b>Redfish</b> support,
               <b>Wake-on-LAN</b> server, advanced <b>authorization</b> and <b>SSL</b> encryption.
               This is just a short list of what Pi-KVM can do out of the box.
             </td>
@@ -106,7 +107,8 @@
                 <li>OTG <b>Keyboard</b> & <b>mouse</b>; <b>Mass Storage Drive</b> emulation.</li>
                 <li>Ability to <b>simulate "removal and insertion" for USB</b>.</li>
                 <li>Onboard <b>ATX power control</b>.</li>
-                <li><b>An RTC clock</b>.</li>
+                <li>Onboard <b>fan controller</b>.</li>
+                <li><b>A real-time clock</b>.</li>
                 <li><b>RJ-45 and USB serial console port</b> (to manage Pi-KVM OS or to connect with the server).</li>
                 <li><b>Optional AVR-based HID</b> (for some rare and strange motherboards whose BIOS
                   doesn't understand the OTG emulated keyboard).
@@ -188,8 +190,8 @@
             </li>
             <li><b>VNC server</b><br>The managed server and its BIOS can be accessed using a regular VNC client which supports JPEG compression.
             </li>
-            <li><b>IPMI BMC and Redfish</b><br>Use <i>ipmitool</i>, <i>ipmiutil</i> or any existing network infrastructure that supports IPMI
-              to monitor and manage the server's power. Redfish and <i>redfishtool</i> supported too.
+            <li><b>IPMI BMC/SoL and Redfish</b><br>Use <i>ipmitool</i>, <i>ipmiutil</i> or any existing network infrastructure that supports IPMI
+              to manage the server's power and access to serial port via LAN. Redfish and <i>redfishtool</i> supported too.
             </li>
             <li><b>Wake-on-LAN</b><br>Pi-KVM can be configured to power up a managed server using WoL. This will be available in the Web menu.
             </li>

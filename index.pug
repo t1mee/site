@@ -10,7 +10,7 @@ block body
 			table
 				tr
 					td(class="text-left")
-						| A very simple and fully functional Raspberry Pi-based #[b IP-KVM] that #[b you can make with your own hands]
+						| A very simple and fully functional Raspberry Pi-based #[b KVM over IP] that #[b you can make with your own hands]
 						| without any soldering!
 						| #[br]#[br]
 						| This device helps to manage servers or workstations remotely, regardless of the health of the
@@ -25,9 +25,9 @@ block body
 			table
 				tr
 					td(colspan="4")
-						b
-							| Here some examples from us and our happy users.
-							| And the #[a(target="_blank" href="https://www.youtube.com/watch?v=9YhPWjWv5gw") video demo]!
+						| #[b Great project review by Novaspirit Tech: #[a(target="_blank" href="https://youtu.be/plP9Y1likRg") YouTube]]#[br]
+						| Boring technical details from us: #[a(target="_blank" href="https://youtu.be/9YhPWjWv5gw") YouTube]#[br]
+						| And here some examples from us and our happy users.
 				tr
 					each index in [1, 2, 3, 4]
 						td #[+img(`diy-${index}.jpg`, 200)]
@@ -46,7 +46,7 @@ block body
 						| There are many ways to build a Pi-KVM. #[b Raspberry Pi] models #[b 2, 3, 4, or ZeroW] may be used.
 						| Video capture devices can be attached using the #[b CSI-2] or #[b USB] interfaces.
 					td
-						| Access via #[b Web UI] and #[b VNC], #[b IPMI BMC] and #[b Redfish] support,
+						| Access via #[b Web UI] and #[b VNC], #[b IPMI BMC/SoL] and #[b Redfish] support,
 						| #[b Wake-on-LAN] server, advanced #[b authorization] and #[b SSL] encryption.
 						| This is just a short list of what Pi-KVM can do out of the box.
 			a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
@@ -66,7 +66,8 @@ block body
 							li OTG #[b Keyboard] & #[b mouse]; #[b Mass Storage Drive] emulation.
 							li Ability to #[b simulate "removal and insertion" for USB].
 							li Onboard #[b ATX power control].
-							li #[b An RTC clock].
+							li Onboard #[b fan controller].
+							li #[b A real-time clock].
 							li #[b RJ-45 and USB serial console port] (to manage Pi-KVM OS or to connect with the server).
 							li
 								| #[b Optional AVR-based HID] (for some rare and strange motherboards whose BIOS
@@ -138,9 +139,9 @@ block body
 						| to the memory card due to a sudden power outage.
 					+li("VNC server")
 						| The managed server and its BIOS can be accessed using a regular VNC client which supports JPEG compression.
-					+li("IPMI BMC and Redfish")
+					+li("IPMI BMC/SoL and Redfish")
 						| Use #[i ipmitool], #[i ipmiutil] or any existing network infrastructure that supports IPMI
-						| to monitor and manage the server's power. Redfish and #[i redfishtool] supported too.
+						| to manage the server's power and access to serial port via LAN. Redfish and #[i redfishtool] supported too.
 					+li("Wake-on-LAN")
 						| Pi-KVM can be configured to power up a managed server using WoL. This will be available in the Web menu.
 					+li("Extensible authorization methods")
