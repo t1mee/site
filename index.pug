@@ -47,7 +47,7 @@ block body
 						| Video capture devices can be attached using the #[b CSI-2] or #[b USB] interfaces.
 					td
 						| Access via #[b Web UI] and #[b VNC], #[b IPMI BMC/SoL] and #[b Redfish] support,
-						| #[b Wake-on-LAN] server, advanced #[b authorization] and #[b SSL] encryption.
+						| #[b Wake-on-LAN] server, advanced #[b authorization] and #[b HTTPS] out of the box.
 						| This is just a short list of what Pi-KVM can do out of the box.
 			a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
 				div
@@ -78,18 +78,13 @@ block body
 								| #[b No need for soldering or breadboarding.] It's a ready-made, reliable board
 								| which you can use yourself or provide to your clients.
 							li Continued use of Pi-KVM OS - #[b all the software will be fully open].
-							li #[b It will cost about $130 - or less], we are working to make it as cheap as possible.
 					td #[+img("v3-board-1.jpg", 300)]
 				tr
 					td #[+img("v3-board-2.jpg", 300)]
 			br
 			a(target="_blank" href=preorder_link class="clickable")
 				div
-					| Subscribe for Pre-order
-			h4 ... and we'll let you know when you can purchase the board.#[br]
-			h3
-				| Status as of April 2021: We expect to receive the first batch from the factory on April 20. Hurray!
-				| Sales are expected to start shortly afterwards.
+					| Pi-KVM v3 HAT is coming to Kickstarter soon!
 			br
 			br
 			hr
@@ -119,7 +114,7 @@ block body
 						| can be controlled using the ATX button headers on the motherboard.
 					+li("Security")
 						| Pi-KVM can be opened to the Internet and no one will get access without the authorization.
-						| SSL encryption is used to protect traffic from being intercepted by third parties.
+						| SSL is used to protect traffic from being intercepted by third parties.
 					+li("Local monitoring")
 						| Pi-KVM monitors the health of the Raspberry Pi board and will warn you if it's too hot
 						| or is not receiving enough power.
