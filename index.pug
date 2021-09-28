@@ -18,48 +18,17 @@ block body
 						| You can fix any problem, configure the BIOS, and even reinstall the OS using the virtual
 						| CD-ROM or Flash Drive.
 						| #[br]#[br]
-						| #[b It only costs between $30 and $100] depending on the features desired.
+						| #[b It only costs between $30 and $100] for DIY depending on the features desired.
 						| Even the most expensive configuration will be cheaper than a $500 commercial IP-KVM.
 					td #[+img("kvm-main.jpg", 580)]
 			hr
 			table
 				tr
-					td(colspan="4")
-						| #[b Great project review by Novaspirit Tech: #[a(target="_blank" href="https://youtu.be/plP9Y1likRg") YouTube]]#[br]
-						| Boring technical details from us: #[a(target="_blank" href="https://youtu.be/9YhPWjWv5gw") YouTube]#[br]
-						| And here some examples from us and our happy users.
-				tr
-					each index in [1, 2, 3, 4]
-						td #[+img(`diy-${index}.jpg`, 200)]
-			hr
-			table
-				tr
-					td #[b Easy and powerful]
-					td #[b The widest hardware support]
-					td #[b Production features]
-				tr
-					td
-						| Just a few cheap parts and half an hour of assembly and you will have the device
-						| that supports #[b Full HD] video, #[b Mass Storage Drive], #[b keyboard] & #[b mouse], control the #[b ATX power]
-						| and much more.
-					td
-						| There are many ways to build a Pi-KVM. #[b Raspberry Pi] models #[b 2, 3, 4, or ZeroW] may be used.
-						| Video capture devices can be attached using the #[b CSI-2] or #[b USB] interfaces.
-					td
-						| Access via #[b Web UI] and #[b VNC], #[b IPMI BMC/SoL] and #[b Redfish] support,
-						| #[b Wake-on-LAN] server, advanced #[b authorization] and #[b HTTPS] out of the box.
-						| This is just a short list of what Pi-KVM can do out of the box.
-			a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
-				div
-					| DIY Getting Started
-			hr
-			table
-				tr
 					td(rowspan="2" class="text-left")
-						| We are also currently developing our own  
+						| We are also made our own  
 						| #[b HAT for the Raspberry Pi 4].#[br]
 						| #[b #[a(target="_blank" href="https://youtu.be/dTchVKxx7Fo") Watch the video!]]#[br]
-						| This device will have all the features of the DIY version, including:
+						| This device has all the features of the DIY version, including:
 						ul
 							li
 								| #[b HDMI Full HD] capture based on the TC358743 chip
@@ -84,8 +53,38 @@ block body
 			br
 			a(target="_blank" href=preorder_link class="clickable")
 				div
-					| Pi-KVM v3 HAT is coming to Kickstarter soon!
-			br
+					| Pi-KVM v3 HAT is already on Kickstarter!
+			table
+				tr
+					td(colspan="4")
+						| #[b Great project review by Novaspirit Tech: #[a(target="_blank" href="https://youtu.be/plP9Y1likRg") YouTube]]#[br]
+						| Boring technical details from us: #[a(target="_blank" href="https://youtu.be/9YhPWjWv5gw") YouTube]#[br]
+						| And here some examples from us and our happy users.
+				//tr
+					each index in [1, 2, 3, 4]
+						td #[+img(`diy-${index}.jpg`, 200)]
+			hr
+			table
+				tr
+					td #[b Easy and powerful]
+					td #[b The widest hardware support]
+					td #[b Production features]
+				tr
+					td
+						| Just a few cheap parts and half an hour of assembly and you will have the device
+						| that supports #[b Full HD] video, #[b Mass Storage Drive], #[b keyboard] & #[b mouse], control the #[b ATX power]
+						| and much more.
+					td
+						| There are many ways to build a Pi-KVM. #[b Raspberry Pi] models #[b 2, 3, 4, or ZeroW] may be used.
+						| Video capture devices can be attached using the #[b CSI-2] or #[b USB] interfaces.
+					td
+						| Access via #[b Web UI] and #[b VNC], #[b IPMI BMC/SoL] and #[b Redfish] support,
+						| #[b Wake-on-LAN] server, advanced #[b authorization] and #[b HTTPS] out of the box.
+						| This is just a short list of what Pi-KVM can do out of the box.
+			a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
+				div
+					| DIY Getting Started
+			hr
 			br
 			hr
 			br
@@ -147,7 +146,7 @@ block body
 						| authentication infrastructure.
 					+li("Macro scripts")
 						| If repetitive actions must be performed on the attached server (or on several different servers),
-						| a macro can be recorded with keyboard & mouse actions and can be played back mutiple times.
+						| a macro can be recorded with keyboard & mouse actions and can be played back multiple times.
 
 		div(class="block")
 			h2 Open Source
@@ -173,10 +172,10 @@ block body
 				table
 					tr
 						td
+							a(target="_blank" href=preorder_link class="clickable")
+								div
+									| Pi-KVM v3 HAT is already on Kickstarter!
+						td
 							a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
 								div
 									| DIY Getting Started
-						td
-							a(target="_blank" href=preorder_link class="clickable")
-								div
-									| Subscribe for the Device Pre-order
