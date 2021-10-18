@@ -1,12 +1,12 @@
 extends base.pug
 
 append vars
-	- title = "Pi-KVM - Open and cheap DIY IP-KVM on Raspberry Pi"
+	- title = "PiKVM - Open and cheap DIY IP-KVM on Raspberry Pi"
 
 block body
 	div(class="content")
 		div(class="block")
-			h2 Pi-KVM - Open and cheap DIY IP-KVM on Raspberry Pi
+			h2 PiKVM - Open and cheap DIY IP-KVM on Raspberry Pi
 			table
 				tr
 					td(class="text-left")
@@ -38,7 +38,7 @@ block body
 							li Onboard #[b ATX power control].
 							li Onboard #[b fan controller].
 							li #[b A real-time clock].
-							li #[b RJ-45 and USB serial console port] (to manage Pi-KVM OS or to connect with the server).
+							li #[b RJ-45 and USB serial console port] (to manage PiKVM OS or to connect with the server).
 							li
 								| #[b Optional AVR-based HID] (for some rare and strange motherboards whose BIOS
 								| doesn't understand the OTG emulated keyboard).
@@ -46,14 +46,14 @@ block body
 							li
 								| #[b No need for soldering or breadboarding.] It's a ready-made, reliable board
 								| which you can use yourself or provide to your clients.
-							li Continued use of Pi-KVM OS - #[b all the software will be fully open].
+							li Continued use of PiKVM OS - #[b all the software will be fully open].
 					td #[+img("v3-board-1.jpg", 300)]
 				tr
 					td #[+img("v3-board-2.jpg", 300)]
 			br
 			a(target="_blank" href=preorder_link class="clickable")
 				div
-					| Pi-KVM v3 HAT is already on Kickstarter!
+					| PiKVM v3 HAT is already on Kickstarter!
 			table
 				tr
 					td(colspan="4")
@@ -75,12 +75,12 @@ block body
 						| that supports #[b Full HD] video, #[b Mass Storage Drive], #[b keyboard] & #[b mouse], control the #[b ATX power]
 						| and much more.
 					td
-						| There are many ways to build a Pi-KVM. #[b Raspberry Pi] models #[b 2, 3, 4, or ZeroW] may be used.
+						| There are many ways to build a PiKVM. #[b Raspberry Pi] models #[b 2, 3, 4, or ZeroW] may be used.
 						| Video capture devices can be attached using the #[b CSI-2] or #[b USB] interfaces.
 					td
 						| Access via #[b Web UI] and #[b VNC], #[b IPMI BMC/SoL] and #[b Redfish] support,
 						| #[b Wake-on-LAN] server, advanced #[b authorization] and #[b HTTPS] out of the box.
-						| This is just a short list of what Pi-KVM can do out of the box.
+						| This is just a short list of what PiKVM can do out of the box.
 			a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
 				div
 					| DIY Getting Started
@@ -89,7 +89,7 @@ block body
 			hr
 			br
 			h5
-				| Pi-KVM's development is made possible only through#[br]
+				| PiKVM's development is made possible only through#[br]
 				| the #[a(href="/donate.html") financial support] of its awesome sponsors :)
 
 		div(class="block")
@@ -101,21 +101,21 @@ block body
 					+li("Very low video latency")
 						| ~100 milliseconds of video latency. This is the smallest delay of all existing solutions.
 					+li("Extra lightweight Web UI and VNC")
-						| No weird proprietary clients. No ugly applets. Just use your favorite browser to connect to the Pi-KVM.
+						| No weird proprietary clients. No ugly applets. Just use your favorite browser to connect to the PiKVM.
 						| No flash plugins either! Ah, and VNC is also supported.
 					+li("Keyboard & mouse")
 						| Mouse usage works directly in the browser. The keyboard emulator supports displaying the state of the keyboard LEDs.
 					+li("Mass Storage Drive")
-						| On the Raspberry Pi 4 and ZeroW, Pi-KVM can emulate a virtual CD-ROM or Flash Drive.
+						| On the Raspberry Pi 4 and ZeroW, PiKVM can emulate a virtual CD-ROM or Flash Drive.
 						| A live image can be uploaded to boot the attached server.
 					+li("ATX power management")
 						| With a very simple circuit that can be assembled on a breadboard, the power button of the attached server
 						| can be controlled using the ATX button headers on the motherboard.
 					+li("Security")
-						| Pi-KVM can be opened to the Internet and no one will get access without the authorization.
+						| PiKVM can be opened to the Internet and no one will get access without the authorization.
 						| SSL is used to protect traffic from being intercepted by third parties.
 					+li("Local monitoring")
-						| Pi-KVM monitors the health of the Raspberry Pi board and will warn you if it's too hot
+						| PiKVM monitors the health of the Raspberry Pi board and will warn you if it's too hot
 						| or is not receiving enough power.
 					+li("GPIO management")
 						| You can control GPIO and USB relays via the web interface.
@@ -126,7 +126,7 @@ block body
 			div(class="text-left")
 				ul
 					+li("Linux-based embedded OS")
-						| The Pi-KVM OS is based on  
+						| The PiKVM OS is based on  
 						| #[a(href="https://archlinuxarm.org" target="_blank") Arch Linux ARM]  
 						| and can be customized for any needs. Thousands of pre-built binary packages are at your service
 						| and can be updated with a single command!
@@ -139,10 +139,10 @@ block body
 						| Use #[i ipmitool], #[i ipmiutil] or any existing network infrastructure that supports IPMI
 						| to manage the server's power and access to serial port via LAN. Redfish and #[i redfishtool] supported too.
 					+li("Wake-on-LAN")
-						| Pi-KVM can be configured to power up a managed server using WoL. This will be available in the Web menu.
+						| PiKVM can be configured to power up a managed server using WoL. This will be available in the Web menu.
 					+li("Extensible authorization methods")
-						| Multiple Pi-KVMs can be configured to use a common authorization service.
-						| PAM and its rich authorization mechanisms can also be used to integrate Pi-KVM into your existing
+						| Multiple PiKVMs can be configured to use a common authorization service.
+						| PAM and its rich authorization mechanisms can also be used to integrate PiKVM into your existing
 						| authentication infrastructure.
 					+li("Macro scripts")
 						| If repetitive actions must be performed on the attached server (or on several different servers),
@@ -153,18 +153,18 @@ block body
 			div(class="text-left")
 				ul
 					+li("Open & free")
-						| Pi-KVM is Free and Open Source Software #[a(target="_blank" href="https://github.com/pikvm") released under the GPLv3].
+						| PiKVM is Free and Open Source Software #[a(target="_blank" href="https://github.com/pikvm") released under the GPLv3].
 					+li("Community & support")
-						| Pi-KVM has a large community. Join the #[a(target="_blank" href=discord_link) Discord chat]
+						| PiKVM has a large community. Join the #[a(target="_blank" href=discord_link) Discord chat]
 						| if you have any questions.
 					+li("Extensible")
-						| Pi-KVM was designed as a set of microservices with a plug-in architecture. It's very easy to modify and maintain.
+						| PiKVM was designed as a set of microservices with a plug-in architecture. It's very easy to modify and maintain.
 					+li("Comprehensive API")
 						| Everything that can be done via the user interface can also be done via a powerful HTTP API.
 					+li("Know-how")
 						| We created our very own #[a(target="_blank" href="https://github.com/pikvm/ustreamer") MJPG video server]
 						|  written in C with multi-threading support and GPU video encoding - the fastest streaming solution available
-						| to provide the best video quality for Pi-KVM. We also tested a lot of hardware configurations
+						| to provide the best video quality for PiKVM. We also tested a lot of hardware configurations
 						|  so that you can be sure devices you assemble will work reliably.
 
 		div(class="block")
@@ -174,7 +174,7 @@ block body
 						td
 							a(target="_blank" href=preorder_link class="clickable")
 								div
-									| Pi-KVM v3 HAT is already on Kickstarter!
+									| PiKVM v3 HAT is already on Kickstarter!
 						td
 							a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
 								div

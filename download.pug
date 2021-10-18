@@ -1,14 +1,14 @@
 extends base.pug
 
 append vars
-	- title = "Pi-KVM / Download - Open and cheap DIY IP-KVM on Raspberry Pi"
+	- title = "PiKVM / Download - Open and cheap DIY IP-KVM on Raspberry Pi"
 
 block body
 	div(class="content")
 		div(class="block text-left")
-			h3 Here you can find ready-made Pi-KVM images for Raspberry Pi
+			h3 Here you can find ready-made PiKVM images for Raspberry Pi
 			hr
-			| Download the appropriate memory card image for the #[a(target="_blank" href="https://github.com/pikvm/pikvm") Pi-KVM].
+			| Download the appropriate memory card image for the #[a(target="_blank" href="https://github.com/pikvm/pikvm") PiKVM].
 			| Select the image by the #[a(target="_blank" href=`${github_link}#required-hardware`) board, platform],
 			| and the video capture device you are using.
 			| #[br]#[br]
@@ -17,26 +17,26 @@ block body
 			h3 #[b Raspberry Pi 4], #[b v2] platform:
 			ul
 				li
-					| For HDMI-to-CSI bridge: #[a(href="/images/v2-hdmi-rpi4.img.bz2") #[b v2-hdmi-rpi4.img.bz2]]
-					| [#[a(href="/images/v2-hdmi-rpi4.img.bz2.sha1") SHA-1]]
+					| For HDMI-to-CSI bridge: #[a(href="https://files.pikvm.org/images/v2-hdmi-rpi4-latest.img.bz2") #[b v2-hdmi-rpi4-latest.img.bz2]]
+					| [#[a(href="https://files.pikvm.org/images/v2-hdmi-rpi4-latest.img.bz2.sha1") SHA-1]]
 				li
-					| For HDMI-to-USB dongle: #[a(href="/images/v2-hdmiusb-rpi4.img.bz2") #[b v2-hdmiusb-rpi4.img.bz2]]
-					| [#[a(href="/images/v2-hdmiusb-rpi4.img.bz2.sha1") SHA-1]]
+					| For HDMI-to-USB dongle: #[a(href="https://files.pikvm.org/images/v2-hdmiusb-rpi4-latest.img.bz2") #[b v2-hdmiusb-rpi4-latest.img.bz2]]
+					| [#[a(href="https://files.pikvm.org/images/v2-hdmiusb-rpi4-latest.img.bz2.sha1") SHA-1]]
 			h3 #[b Raspberry Pi Zero W], #[b v2] platform:
 			ul
 				li
-					| For HDMI-to-CSI bridge: #[a(href="/images/v2-hdmi-zerow.img.bz2") #[b v2-hdmi-zerow.img.bz2]]
-					| [#[a(href="/images/v2-hdmi-zerow.img.bz2.sha1") SHA-1]]
+					| For HDMI-to-CSI bridge: #[a(href="https://files.pikvm.org/images/v2-hdmi-zerow-latest.img.bz2") #[b v2-hdmi-zerow-latest.img.bz2]]
+					| [#[a(href="https://files.pikvm.org/images/v2-hdmi-zerow-latest.img.bz2.sha1") SHA-1]]
 			hr
 			h3 #[b Raspberry Pi 4], #[b v3 HAT] platform:
 			ul
 				li
-					| For v3 HAT Platform only: #[a(href="/images/v3-hdmi-rpi4.img.bz2") #[b v3-hdmi-rpi4.img.bz2]]
-					| [#[a(href="/images/v3-hdmi-rpi4.img.bz2.sha1") SHA-1]]
-			| To flash the image #[a(target="_blank" href=`${github_link}/blob/master/pages/flashing_os.md`) follow the instructions].
+					| For v3 HAT Platform only: #[a(href="https://files.pikvm.org/images/v3-hdmi-rpi4-latest.img.bz2") #[b v3-hdmi-rpi4-latest.img.bz2]]
+					| [#[a(href="https://files.pikvm.org/images/v3-hdmi-rpi4-latest.img.bz2.sha1") SHA-1]]
+			| To flash the image #[a(target="_blank" href="https://docs.pikvm.org/flashing_os") follow the instructions].
 			hr
 			| Right now, pre-compiled images are only available for the Raspberry Pi 4 and ZeroW.
 			| In all other cases, you will need to build the operating system yourself. But don't worry,
-			| it's #[a(target="_blank" href=`${github_link}/blob/master/pages/building_os.md`) very simple].
+			| it's #[a(target="_blank" href="https://docs.pikvm.org/building_os") very simple].
 			hr
-			| #[a(target="_blank" href="/images") Images archive].
+			| #[a(target="_blank" href="https://files.pikvm.org/images") Images archive].
