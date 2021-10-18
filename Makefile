@@ -5,8 +5,9 @@ all:
 
 pug:
 	~/.npm-packages/bin/pug --pretty index.pug
-	~/.npm-packages/bin/pug --pretty download.pug
-	~/.npm-packages/bin/pug --pretty donate.pug
+	~/.npm-packages/bin/pug --pretty download/index.pug
+	~/.npm-packages/bin/pug --pretty donate/index.pug
+	~/.npm-packages/bin/pug --pretty v3/index.pug
 
 upload:
-	rsync -rl --progress css img *.html *.webmanifest *.ico $(_REPO_DEST)
+	rsync -rl --progress --exclude '*.pug' css img download donate v3 *.html *.webmanifest *.ico $(_REPO_DEST)
