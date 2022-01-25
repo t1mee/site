@@ -12,7 +12,6 @@ doctype html
 - var github_link = "https://github.com/pikvm/pikvm"
 - var discord_link = "https://discord.gg/bpmXfz5"
 - var reddit_link = "https://reddit.com/r/pikvm"
-- var preorder_link = "https://www.kickstarter.com/projects/mdevaev/pikvm-v3-hat"
 - var email_link = "mailto:mdevaev@gmail.com"
 
 mixin li(short)
@@ -59,7 +58,9 @@ html(lang="en")
 				a(class="logo" href="/")
 					img(class="svg-gray" src=`${img_dir}/site.svg` alt="PiKVM")
 			li(class="left")
-				a(class="link important" target="_blank" href=preorder_link) V3 HAT on Kickstarter!
+				a(class="link important" href="/buy") Buy PiKVM v3 HAT
+			li(class="left")
+				a(class="link" target="_blank" href="https://docs.pikvm.org") Handbook
 			li(class="left")
 				a(class="link" target="_blank" href=reddit_link) Blog
 			li(class="left")
