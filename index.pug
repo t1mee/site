@@ -1,12 +1,12 @@
 extends base.pug
 
 append vars
-	- title = "PiKVM - Open and cheap DIY IP-KVM on Raspberry Pi"
+	- title = "PiKVM - Open and inexpensive DIY IP-KVM on Raspberry Pi"
 
 block body
 	div(class="content")
 		div(class="block")
-			h2 PiKVM - Open and cheap DIY IP-KVM on Raspberry Pi
+			h2 PiKVM - Open and inexpensive DIY IP-KVM on Raspberry Pi
 			table
 				tr
 					td(class="text-left")
@@ -25,8 +25,8 @@ block body
 			table
 				tr
 					td(rowspan="2" class="text-left")
-						| We also made our own  
-						| #[b HAT for the Raspberry Pi 4].#[br]
+						| We also made our own
+						| #[b ready-made PiKVM V3 on Raspberry Pi 4].#[br]
 						| #[b #[a(target="_blank" href="https://youtu.be/dTchVKxx7Fo") Watch the video!]]#[br]
 						| This device has all the features of the DIY version, including:
 						ul
@@ -39,17 +39,16 @@ block body
 							li Onboard #[b fan controller].
 							li #[b A real-time clock].
 							li #[b RJ-45 and USB serial console port] (to manage PiKVM OS or to connect with the server).
-							li #[b Optional OLED screen] to display network status or other desired information.
 							li
-								| #[b No need for soldering or breadboarding.] It's a ready-made, reliable board
+								| #[b No need for soldering or breadboarding.] It's a pre-assembled, reliable device
 								| which you can use yourself or provide to your clients.
-							li Continued use of PiKVM OS - #[b all the software will be fully open].
-					td #[+img("v3-board-1.jpg", 300)]
+							li Continued use of PiKVM OS - #[b all the software is fully open].
+					td #[+img("v3-preasm.jpg", 300)]
 				tr
 					td #[+img("v3-board-2.jpg", 300)]
 			br
 			a(href="/buy" class="clickable")
-				div Buy PiKVM v3 HAT right now!
+				div Buy PiKVM V3 right now!
 			table
 				tr
 					td(colspan="4")
@@ -79,13 +78,6 @@ block body
 						| This is just a short list of what PiKVM can do out of the box.
 			a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
 				div DIY Getting Started
-			hr
-			br
-			hr
-			br
-			h5
-				| PiKVM's development is made possible only through#[br]
-				| the #[a(href="/donate") financial support] of its awesome sponsors :)
 
 		div(class="block")
 			h2 Fully-featured and modern IP-KVM
@@ -168,7 +160,7 @@ block body
 					tr
 						td
 							a(href="/buy" class="clickable")
-								div Buy PiKVM v3 HAT right now!
+								div Buy PiKVM V3 right now!
 						td
 							a(target="_blank" href=`${github_link}#diy-getting-started` class="clickable")
 								div DIY Getting Started
