@@ -99,10 +99,8 @@ button {
 
 .videos {
 	margin-top: 40px;
-}
-
-.videos > :not(:first-child) {
-	margin-left: 32px;
+	display: flex;
+	gap: 32px;
 }
 
 a.containerSubtitle {
@@ -112,10 +110,7 @@ a.containerSubtitle {
 .products {
 	margin-top: 56px;
 	display: flex;
-}
-
-.products > :not(:first-child) {
-	margin-left: 32px;
+	gap: 32px;
 }
 
 .product {
@@ -140,4 +135,89 @@ a.containerSubtitle {
 
 .btnContained {
 	background-color: var(--cs-color-info);
+}
+
+.products {
+	display: flex;
+}
+
+.benefits {
+	display: flex;
+	gap: 32px;
+}
+
+.benefitTitle {
+	font-size: 18px;
+	line-height: 22px;
+	margin-top: 24px;
+}
+
+.benefitDescription {
+	font-size: 16px;
+	line-height: 22px;
+	margin-top: 16px;
+}
+
+.params {
+	margin-top: 48px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.params > :nth-last-child(2n + 3) {
+	border-right: 1px solid var(--cs-color-gray);
+}
+
+.params > :last-child {
+	border-bottom: 1px solid var(--cs-color-gray);
+}
+.paramCard {
+	border-top: 1px solid var(--cs-color-gray);
+	box-sizing: border-box;
+	padding: 24px 16px;
+	flex: 50%;
+}
+
+.paramDescription {
+	margin-top: 16px;
+}
+
+.community {
+	display: flex;
+	gap: 36px;
+}
+
+.communityTitle {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	color: var(--cs-color-main);
+	font-size: 36px;
+	line-height: 42px;
+}
+
+.communityItem {
+	margin-top: 16px;
+	margin-bottom: 48px;
+}
+
+.communitySubtitle {
+	color: var(--cs-color-main);
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 16px;
+}
+
+.communityDescription {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	color: var(--cs-color-gray);
+}
+
+.communityHub {
+	font-size: 20px;
+	line-height: 24px;
+	color: var(--cs-color-info);
+	text-decoration: underline;
 }

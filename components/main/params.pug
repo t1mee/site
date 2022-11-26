@@ -1,0 +1,14 @@
+- var params = [{title: "Linux-based embedded OS", description: "The PiKVM OS is based on Arch Linux ARM and can be customized for any needs. Thousands of pre-built binary packages are at your service and can be updated with a single command!"}, {title: "Read-only filesystem", description: "By default the OS runs in read-only mode, as an embedded system should. This prevents damage to the memory card due to a sudden power outage."}, {title: "VNC server", description: "The managed server and its BIOS can be accessed using a regular VNC client which supports JPEG compression."}, {title: "IPMI BMC/SoL and Redfish", description: "Use ipmitool, ipmiutil or any existing network infrastructure that supports IPMI to manage the server's power and access to serial port via LAN. Redfish and redfishtool supported too."}, {title: "Wake-on-LAN", description: "PiKVM can be configured to power up a managed server using WoL. This will be available in the Web menu."}, {title: "Extensible authorization methods", description: "Multiple PiKVMs can be configured to use a common authorization service. PAM and its rich authorization mechanisms can also be used to integrate PiKVM into your existing authentication infrastructure."}]
+
+.container.gradient 
+    .banner
+        .bannerText.colorWhite
+            h2 Fully-featured and modern IP-KVM
+        .params
+            each param in params
+                .paramCard 
+                    h3.colorWhite= param.title
+                    p.paramDescription.colorGray= param.description
+            .paramCard 
+                    h3.colorWhite Macro scripts
+                    p.paramDescription.colorGray If repetitive actions must be performed on the attached server (or on several different servers), a macro can be recorded with keyboard & mouse actions and can be played back multiple times.

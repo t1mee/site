@@ -1,0 +1,24 @@
+- var params = [{title: "Linux-based embedded OS", description: "The PiKVM OS is based on Arch Linux ARM and can be customized for any needs. Thousands of pre-built binary packages are at your service and can be updated with a single command!"}, {title: "Read-only filesystem", description: "By default the OS runs in read-only mode, as an embedded system should. This prevents damage to the memory card due to a sudden power outage."}, {title: "VNC server", description: "The managed server and its BIOS can be accessed using a regular VNC client which supports JPEG compression."}, {title: "IPMI BMC/SoL and Redfish", description: "Use ipmitool, ipmiutil or any existing network infrastructure that supports IPMI to manage the server's power and access to serial port via LAN. Redfish and redfishtool supported too."}, {title: "Wake-on-LAN", description: "PiKVM can be configured to power up a managed server using WoL. This will be available in the Web menu."}, {title: "Extensible authorization methods", description: "Multiple PiKVMs can be configured to use a common authorization service. PAM and its rich authorization mechanisms can also be used to integrate PiKVM into your existing authentication infrastructure."}]
+
+.container 
+    .banner
+        .community
+            .communityCard 
+                h2.communityTitle Open Source
+                .communityItem 
+                    h3.communitySubtitle Open & free
+                    p.communityDescription PiKVM is Free and Open Source Software released under the GPLv3.
+                .communityItem 
+                    h3.communitySubtitle Extensible
+                    p.communityDescription PiKVM was designed as a set of microservices with a plug-in architecture. It's very easy to modify and maintain.
+            .communityCard
+                h2.communityTitle #[img.communityLogo(src="/assets/communityhub.svg")] #[a.communityHub(href= github_link) DIY GETTING STARTED]
+                .communityItem 
+                    h3.communitySubtitle Community & support
+                    p.communityDescription PiKVM has a large community. Join the Discord chat if you have any questions.
+                .communityItem 
+                    h3.communitySubtitle Comprehensive API
+                    p.communityDescription Everything that can be done via the user interface can also be done via a powerful HTTP API.
+        .communityItem 
+            h3.communitySubtitle Know-how
+            p.communityDescription We created our very own MJPG video server written in C with multi-threading support and GPU video encoding - the fastest streaming solution available to provide the best video quality for PiKVM. We also tested a lot of hardware configurations so that you can be sure devices you assemble will work reliably.
