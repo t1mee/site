@@ -1,0 +1,60 @@
+doctype html
+
+- var css_dir = "/css"
+- var js_dir = "/js"
+
+- var title = ""
+- var main_js = ""
+- var body_class = ""
+- var css_list = ["vars", "main", "navbar"]
+	
+mixin product(img, title, description, link)
+	.product.colorWhite
+		img(src= img alt= title)
+		h4.productName.colorInfo=title
+		h5.productSubtitle=description.subtitle
+		ul.productInfo
+			each text in description.info 
+				li.colorGray=text
+		button.btnContained
+			a.colorWhite(href=link) Buy now
+
+block vars
+
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		
+		title #{title}
+		link(rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png")
+		link(rel="manifest" href="/site.webmanifest")
+		link(rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5")
+		meta(name="msapplication-TileColor" content="#2b5797")
+		meta(name="theme-color" content="#ffffff")
+
+		meta(data-n-head="ssr" property="og:description"
+			 content="PiKVM an easy and inexpensive DIY IP-KVM on Raspberry Pi to control remote machines: Full HD, mouse, Mass Storage Drive, VNC, IPMI and much more out of the box. Most modern KVM over IP ever!")
+		meta(data-n-head="ssr" property="og:image" content="https://pikvm.org/img/logo.png")
+		meta(data-n-head="ssr" property="og:url" content="https://pikvm.org")
+		meta(data-n-head="ssr" data-hid="og:title" property="og:title" content=title)
+		link(data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico")
+
+		each name in css_list
+			link(rel="stylesheet" href=`${css_dir}/${name}.css`)
+
+		if main_js
+			script(type="module")
+				| import {main} from "#{js_dir}/#{main_js}.js";
+				| main();
+
+	body
+		include navbar.pug	
+
+		block body
+
+		include footer.pug	
+		
+
+

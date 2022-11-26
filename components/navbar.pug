@@ -1,0 +1,21 @@
+- var nav_links = [{title: "Buy PiKVM V3", url: "/buy"}, {title: "Documentation", url: "https://docs.pikvm.org"}, {title: "Support", url: "/support"}, {title: "Download", url: "/download"}, {title: "Donate", url: "/donate"}]
+
+- var github_link = "https://github.com/pikvm/pikvm"
+- var discord_link = "https://discord.gg/bpmXfz5"
+- var reddit_link = "https://reddit.com/r/pikvm"
+- var email_link = "mailto:mdevaev@gmail.com"
+
+header
+    nav.navbar
+        .navMenu
+            ul.navList
+                li.navItem
+                    a.link.aboutLink(href="/") About
+                each nav in nav_links 
+                    li
+                        a.link(href= nav.url)= nav.title
+                //li(class="right")
+                    a(class="link" href=email_link) Email Us	
+            .socials
+                a.social(target="_blank" href=github_link): img(src="/assets/github.svg" alt="github")
+                a.social(target="_blank" href=reddit_link): img(src="/assets/reddit.svg" alt="github")
