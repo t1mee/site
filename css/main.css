@@ -221,3 +221,24 @@ a.containerSubtitle {
 	color: var(--cs-color-info);
 	text-decoration: underline;
 }
+
+.footer {
+	padding: 32px 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.footerButtons {
+	width: 100%;
+	max-width: var(--cs-content-size);
+	display: flex;
+	gap: 28px;
+}
+
+.darkBtn {
+	box-sizing: content-box;
+	background-color: var(--cs-color-main);
+	color: var(--cs-color-info);
+	border: 2px solid var(--cs-color-info);
+}
