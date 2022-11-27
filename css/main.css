@@ -241,6 +241,12 @@ a.containerSubtitle {
 	gap: 28px;
 }
 
+.footerBtn {
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 500;
+}
+
 @media (max-width: 992px) {
 	.footerButtons {
 		gap: 16px;
@@ -257,6 +263,11 @@ a.containerSubtitle {
 	background-color: var(--cs-color-main);
 	color: var(--cs-color-info);
 	border: 2px solid var(--cs-color-info);
+}
+
+.darkBtn:hover {
+	border: 2px solid white;
+	color: white;
 }
 
 .infoBlock {
