@@ -1,22 +1,10 @@
-* {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-}
-
-body {
-	font-family: arial, sans-serif !important;
-	background-color: var(--cs-color-bg);
-}
-
-button {
+/* button {
 	cursor: pointer;
 	border: none;
 	padding: 16px;
 	width: 100%;
 	border-radius: 4px;
-}
+} */
 
 form {
 	width: 100%;
@@ -38,9 +26,18 @@ form {
 	color: var(--cs-color-gray);
 }
 
+.color-main {
+	color: var(--cs-color-main);
+}
+
+.bg-color-main {
+	background-color: var(--cs-color-main);
+}
+
 .text-lg {
 	font-size: 36px;
 	line-height: 42px;
+	font-weight: 700;
 }
 
 .text-md {
@@ -53,17 +50,20 @@ form {
 	line-height: 22px;
 }
 
-.content {
-	width: 100%;
-	margin-top: 72px;
+.content-size {
+	max-width: var(--cs-content-size);
 }
 
-.container {
-	width: 100%;
-	display: flex;
+.content {
+	margin-top: 70px;
+}
+
+.justify-center {
 	justify-content: center;
-	align-content: center;
-	padding: 80px 0;
+}
+
+.items-center {
+	align-items: center;
 }
 
 .containerTitle {
@@ -76,6 +76,7 @@ form {
 	font-size: 24px;
 	line-height: 28px;
 	margin-top: 32px;
+	margin-bottom: 16px;
 }
 
 .gradient {
@@ -83,20 +84,17 @@ form {
 }
 
 .banner {
-	max-width: var(--cs-content-size);
-	display: flex;
-	flex-direction: column;
+	padding: 80px;
+}
+
+@media (max-width: 600px) {
+	.banner {
+		padding: 40px;
+	}
 }
 
 .mainBanner {
 	flex-direction: row;
-}
-
-.bannerText {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 .mainBannerText {
@@ -109,6 +107,13 @@ form {
 
 .bannerDescription {
 	color: var(--cs-color-gray);
+	margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+	.bannerDescription {
+		margin-top: 24px;
+	}
 }
 
 .videos {
@@ -121,14 +126,15 @@ a.containerSubtitle {
 	font-size: 20px;
 	text-decoration: underline;
 }
+
 .products {
 	margin-top: 56px;
-	display: flex;
-	gap: 32px;
 }
 
-.product {
-	max-width: 320px;
+@media (max-width: 600px) {
+	.products {
+		margin-top: 32px;
+	}
 }
 
 .productName {
@@ -145,18 +151,31 @@ a.containerSubtitle {
 	margin-bottom: 32px;
 }
 
+.btn {
+	padding: 16px;
+	width: 100%;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
 .btnContained {
 	background-color: var(--cs-color-info);
+	border: 2px solid var(--cs-color-info) !important;
+}
+
+.buyBtn {
+	font-size: 22px;
+	line-height: 24px;
 }
 
 .products {
 	display: flex;
 }
 
-.benefits {
+/* .benefits {
 	display: flex;
 	gap: 32px;
-}
+} */
 
 .benefitTitle {
 	margin-top: 24px;
@@ -166,24 +185,24 @@ a.containerSubtitle {
 	margin-top: 16px;
 }
 
-.params {
-	margin-top: 48px;
-	display: flex;
-	flex-wrap: wrap;
+@media (min-width: 992px) {
+	.params > :nth-last-child(2n + 3) {
+		border-right: 1px solid var(--cs-color-gray);
+	}
+
+	.params > :last-child {
+		border-bottom: 1px solid var(--cs-color-gray);
+	}
+
+	.paramCard {
+		border-top: 1px solid var(--cs-color-gray);
+	}
 }
 
-.params > :nth-last-child(2n + 3) {
-	border-right: 1px solid var(--cs-color-gray);
-}
-
-.params > :last-child {
-	border-bottom: 1px solid var(--cs-color-gray);
-}
-.paramCard {
-	border-top: 1px solid var(--cs-color-gray);
-	box-sizing: border-box;
-	padding: 24px 16px;
-	flex: 50%;
+@media (max-width: 992px) {
+	.paramCard {
+		border-top: 1px solid var(--cs-color-gray);
+	}
 }
 
 .paramDescription {
@@ -243,4 +262,41 @@ a.containerSubtitle {
 	background-color: var(--cs-color-main);
 	color: var(--cs-color-info);
 	border: 2px solid var(--cs-color-info);
+}
+
+.infoBlock {
+	margin-top: 48px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+	.infoBlock > :nth-child(3n) {
+		border-left: 1px solid var(--cs-color-gray);
+	}
+
+	.infoBlock > :nth-last-child(3n) {
+		border-right: 1px solid var(--cs-color-gray);
+	}
+
+	.infoBlock > :nth-last-child(-n + 3) {
+		border-bottom: 1px solid var(--cs-color-gray);
+	}
+
+	.infoCard {
+		border-top: 1px solid var(--cs-color-gray);
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 992px) {
+	.infoBlock > :nth-last-child(n) {
+		border-top: 1px solid var(--cs-color-gray);
+	}
+}
+
+@media (min-width: 992px) {
+	.interface {
+		/* min-width: 496px; */
+	}
 }

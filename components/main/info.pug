@@ -1,0 +1,12 @@
+- var info = [{title: "Easy to build", description: "A ready-to-use OS images and friendly build environment. The hardware can be made in half an hour and without soldering."}, {title: "Very low video latency", description: "~100 milliseconds of video latency. This is the smallest delay of all existing solutions."}, {title: "Extra lightweight Web UI and VNC", description: "No weird proprietary clients. No ugly applets. Just use your favorite browser to connect to the PiKVM. No flash plugins either! Ah, and VNC is also supported."}, {title: "Keyboard & mouse", description: "Mouse usage works directly in the browser. The keyboard emulator supports displaying the state of the keyboard LEDs."}, {title: "Mass Storage Drive", description: "On the Raspberry Pi 4 and ZeroW, PiKVM can emulate a virtual CD-ROM or Flash Drive. A live image can be uploaded to boot the attached server."}, {title: "ATX power management", description: "With a very simple circuit that can be assembled on a breadboard, the power button of the attached server can be controlled using the ATX button headers on the motherboard."}, {title: "Security", description: "PiKVM can be opened to the Internet and no one will get access without the authorization. SSL is used to protect traffic from being intercepted by third parties."}, {title: "Local monitoring", description: "PiKVM monitors the health of the Raspberry Pi board and will warn you if it's too hot or is not receiving enough power."}, {title: "GPIO management", description: "You can control GPIO and USB relays via the web interface. The extensible interface allows you to make anything out of it."}]
+
+.container-fluid.gradient 
+    .banner.d-flex.justify-content-center
+        .w-100.content-size
+            .bannerText.color-white.pb-0
+                h2.text-center Fully-featured and modern IP-KVM
+            .infoBlock.row
+                each i in info
+                    .infoCard.px-0.px-lg-3.py-lg-4.py-4.col-lg-4 
+                        h3.color-white= i.title
+                        p.paramDescription.color-gray= i.description

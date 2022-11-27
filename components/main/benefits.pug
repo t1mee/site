@@ -1,10 +1,10 @@
 - var benefits = [{img: "/assets/thunder.svg", title: "Easy and powerful", description: "Just a few cheap parts and half an hour of assembly and you will have the device that supports Full HD video, Mass Storage Drive, keyboard & mouse, control the ATX power and much more."}, {img: "/assets/tools.svg", title: "The widest hardware support", description: "There are many ways to build a PiKVM. Raspberry Pi models 2, 3, 4, or ZeroW may be used. Video capture devices can be attached using the CSI-2 or USB interfaces."}, {img: "/assets/gears.svg", title: "Production features", description: "Access via Web UI and VNC, IPMI BMC/SoL and Redfish support, Wake-on-LAN server, advanced authorization and HTTPS out of the box. This is just a short list of what PiKVM can do out of the box."}]
 
-.container 
-    .banner
-        .benefits
+.container-fluid 
+    .banner.d-flex.justify-content-center
+        .row.w-100.content-size.justify-content-between.flex-lg-row
             each benefit in benefits
-                .benefit
+                .col-lg-4
                     img(src= benefit.img)
                     h6.benefitTitle.text-md= benefit.title
                     p.benefitDescription.color-gray.text-sm= benefit.description

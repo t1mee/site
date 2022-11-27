@@ -1,43 +1,5 @@
-.navbar {
-	background-color: var(--cs-color-main);
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 72px;
-	z-index: 2147483646;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.navMenu {
-	display: flex;
-	max-width: var(--cs-content-size);
-	width: 100%;
-}
-
 .navList {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	margin-right: 32px;
-}
-
-.link {
-	font-size: 18px;
-	line-height: 22px;
-	color: white;
-}
-
-.aboutLink {
-	color: var(--cs-color-info);
-}
-
-.socials {
-	display: flex;
-	color: white;
+	margin-right: 76px;
 }
 
 .social {

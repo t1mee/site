@@ -1,11 +1,11 @@
 - var videos = ["https://www.youtube.com/embed/dTchVKxx7Fo", "https://www.youtube.com/embed/dTchVKxx7Fo", "https://www.youtube.com/embed/dTchVKxx7Fo"] 
 
-.container
-    .banner
+.container-fluid
+    .banner.d-flex.flex-column.align-items-center
         .bannerText.color-secondary
             h2.containerTitle.text-lg We also made our own ready-made PiKVM V3 on Raspberry Pi 4.
             h3.containerSubtitle.color-info Watch the video!
-        .videos 
+        .row.mt-lg-4 
             each video in videos
-                iframe( width="320" height="178" src=video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+                iframe.col-lg-4.mt-lg-0.mt-4( width="320" height="178" src=video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
         a.containerSubtitle.color-info(href="/") See more

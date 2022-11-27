@@ -5,17 +5,21 @@
 - var reddit_link = "https://reddit.com/r/pikvm"
 - var email_link = "mailto:mdevaev@gmail.com"
 
-header
-    nav.navbar
-        .navMenu
-            ul.navList
-                li.navItem
-                    a.link.aboutLink(href="/") About
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-color-main.fixed-top.py-3
+  .container-fluid.justify-content-sm-end
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse.justify-content-center
+        .content-size.w-100.d-flex.flex-column.flex-lg-row
+            ul.navbar-nav.mb-2.mb-lg-0.justify-content-between.navList.w-100
+                li.nav-item
+                    a.nav-link.color-info.text-md(href="/") About
                 each nav in nav_links 
                     li
-                        a.link(href= nav.url)= nav.title
-                //li(class="right")
-                    a(class="link" href=email_link) Email Us	
-            .socials
-                a.social(target="_blank" href=github_link): img(src="/assets/github.svg" alt="github")
+                        a.nav-link.text-white.text-md(href= nav.url)= nav.title
+            .d-flex.justify-content-center
+                a(target="_blank" href=github_link): img(src="/assets/github.svg" alt="github")
                 a.social(target="_blank" href=reddit_link): img(src="/assets/reddit.svg" alt="github")
+            //li(class="right")
+                a(class="link" href=email_link) Email Us
