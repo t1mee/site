@@ -9,15 +9,16 @@ doctype html
 - var css_list = ["vars", "main", "navbar"]
 	
 mixin product(img, title, description, link)
-	.product.colorWhite
+	.product.color-white
 		img(src= img alt= title)
-		h4.productName.colorInfo=title
-		h5.productSubtitle=description.subtitle
+		h4.productName.color-info=title
+		h5.productSubtitle.text-md=description.subtitle
 		ul.productInfo
 			each text in description.info 
-				li.colorGray=text
-		button.btnContained
-			a.colorWhite(href=link) Buy now
+				li.color-gray=text
+		form(action= link)
+			button.btnContained
+				span.color-white Buy now
 
 block vars
 

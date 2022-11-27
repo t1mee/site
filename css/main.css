@@ -11,26 +11,46 @@ body {
 }
 
 button {
+	cursor: pointer;
 	border: none;
 	padding: 16px;
 	width: 100%;
 	border-radius: 4px;
 }
 
-.colorWhite {
+form {
+	width: 100%;
+}
+
+.color-white {
 	color: white;
 }
 
-.colorSecondary {
+.color-secondary {
 	color: var(--cs-color-secondary);
 }
 
-.colorInfo {
+.color-info {
 	color: var(--cs-color-info);
 }
 
-.colorGray {
+.color-gray {
 	color: var(--cs-color-gray);
+}
+
+.text-lg {
+	font-size: 36px;
+	line-height: 42px;
+}
+
+.text-md {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.text-sm {
+	font-size: 16px;
+	line-height: 22px;
 }
 
 .content {
@@ -49,8 +69,6 @@ button {
 .containerTitle {
 	text-align: center;
 	max-width: 620px;
-	font-size: 36px;
-	line-height: 42px;
 }
 
 .containerSubtitle {
@@ -86,14 +104,10 @@ button {
 }
 
 .bannerTitle {
-	font-size: 36px;
-	line-height: 42px;
 	margin-bottom: 40px;
 }
 
 .bannerDescription {
-	font-size: 16px;
-	line-height: 27px;
 	color: var(--cs-color-gray);
 }
 
@@ -124,8 +138,6 @@ a.containerSubtitle {
 
 .productSubtitle {
 	margin-top: 18px;
-	font-size: 18px;
-	line-height: 22px;
 }
 
 .productInfo {
@@ -147,14 +159,10 @@ a.containerSubtitle {
 }
 
 .benefitTitle {
-	font-size: 18px;
-	line-height: 22px;
 	margin-top: 24px;
 }
 
 .benefitDescription {
-	font-size: 16px;
-	line-height: 22px;
 	margin-top: 16px;
 }
 
@@ -192,8 +200,6 @@ a.containerSubtitle {
 	align-items: center;
 	gap: 24px;
 	color: var(--cs-color-main);
-	font-size: 36px;
-	line-height: 42px;
 }
 
 .communityItem {
@@ -203,14 +209,10 @@ a.containerSubtitle {
 
 .communitySubtitle {
 	color: var(--cs-color-main);
-	font-size: 18px;
-	line-height: 22px;
 	margin-bottom: 16px;
 }
 
 .communityDescription {
-	font-size: 16px;
-	line-height: 22px;
 	font-weight: 400;
 	color: var(--cs-color-gray);
 }
