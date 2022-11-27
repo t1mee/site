@@ -1,7 +1,7 @@
 - var params = [{title: "Linux-based embedded OS", description: "The PiKVM OS is based on Arch Linux ARM and can be customized for any needs. Thousands of pre-built binary packages are at your service and can be updated with a single command!"}, {title: "Read-only filesystem", description: "By default the OS runs in read-only mode, as an embedded system should. This prevents damage to the memory card due to a sudden power outage."}, {title: "VNC server", description: "The managed server and its BIOS can be accessed using a regular VNC client which supports JPEG compression."}, {title: "IPMI BMC/SoL and Redfish", description: "Use ipmitool, ipmiutil or any existing network infrastructure that supports IPMI to manage the server's power and access to serial port via LAN. Redfish and redfishtool supported too."}, {title: "Wake-on-LAN", description: "PiKVM can be configured to power up a managed server using WoL. This will be available in the Web menu."}, {title: "Extensible authorization methods", description: "Multiple PiKVMs can be configured to use a common authorization service. PAM and its rich authorization mechanisms can also be used to integrate PiKVM into your existing authentication infrastructure."}]
 
 .container-fluid.gradient 
-    .banner.d-flex.justify-content-center
+    .banner.d-flex.justify-content-center.paramsBanner
         .w-100.content-size
             h2.color-white.text-center Fully-featured and modern IP-KVM
             .params.mt-5.row

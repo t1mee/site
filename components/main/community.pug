@@ -1,24 +1,29 @@
 - var params = [{title: "Linux-based embedded OS", description: "The PiKVM OS is based on Arch Linux ARM and can be customized for any needs. Thousands of pre-built binary packages are at your service and can be updated with a single command!"}, {title: "Read-only filesystem", description: "By default the OS runs in read-only mode, as an embedded system should. This prevents damage to the memory card due to a sudden power outage."}, {title: "VNC server", description: "The managed server and its BIOS can be accessed using a regular VNC client which supports JPEG compression."}, {title: "IPMI BMC/SoL and Redfish", description: "Use ipmitool, ipmiutil or any existing network infrastructure that supports IPMI to manage the server's power and access to serial port via LAN. Redfish and redfishtool supported too."}, {title: "Wake-on-LAN", description: "PiKVM can be configured to power up a managed server using WoL. This will be available in the Web menu."}, {title: "Extensible authorization methods", description: "Multiple PiKVMs can be configured to use a common authorization service. PAM and its rich authorization mechanisms can also be used to integrate PiKVM into your existing authentication infrastructure."}]
 
-.container 
-    .banner
-        .community
-            .communityCard 
-                h2.communityTitle.text-lg Open Source
+.container-fluid 
+    .banner.d-flex.justify-content-center.paramsBanner
+        .w-100.content-size.pb-5.pb-lg-0
+            .community.row
+                .col-12.row
+                    .col-12.col-md-6.d-flex.justify-content-center.justify-content-md-start 
+                        h2.color-main.mt-3.text-lg Open Source
+                    .col-12.col-md-6.mt-4.mt-md-0.d-flex.justify-content-center.justify-content-md-start
+                        h2.color-main.mt-2.mt-md-0.mt-3.text-lg.flex-column.flex-lg-row #[img.communityLogo(src="/assets/communityhub.svg")] #[a.communityHub(href= github_link) DIY GETTING STARTED]
+                .col-12.row.mt-4.mt-md-0
+                    .col-12.col-md-6 
+                        .mt-4 
+                            h3.communitySubtitle.text-md Open & free
+                            p.communityDescription.text-sm PiKVM is Free and Open Source Software released under the GPLv3.
+                        .mt-4 
+                            h3.communitySubtitle.text-md Extensible
+                            p.communityDescription.text-sm PiKVM was designed as a set of microservices with a plug-in architecture. It's very easy to modify and maintain.
+                    .col-12.col-md-6 
+                        .mt-4 
+                            h3.communitySubtitle.text-md Community & support
+                            p.communityDescription.text-sm PiKVM has a large community. Join the Discord chat if you have any questions.
+                        .mt-4 
+                            h3.communitySubtitle.text-md Comprehensive API
+                            p.communityDescription.text-sm Everything that can be done via the user interface can also be done via a powerful HTTP API.
                 .communityItem 
-                    h3.communitySubtitle.text-md Open & free
-                    p.communityDescription.text-sm PiKVM is Free and Open Source Software released under the GPLv3.
-                .communityItem 
-                    h3.communitySubtitle.text-md Extensible
-                    p.communityDescription.text-sm PiKVM was designed as a set of microservices with a plug-in architecture. It's very easy to modify and maintain.
-            .communityCard
-                h2.communityTitle.text-lg #[img.communityLogo(src="/assets/communityhub.svg")] #[a.communityHub(href= github_link) DIY GETTING STARTED]
-                .communityItem 
-                    h3.communitySubtitle.text-md Community & support
-                    p.communityDescription.text-sm PiKVM has a large community. Join the Discord chat if you have any questions.
-                .communityItem 
-                    h3.communitySubtitle.text-md Comprehensive API
-                    p.communityDescription.text-sm Everything that can be done via the user interface can also be done via a powerful HTTP API.
-        .communityItem 
-            h3.communitySubtitle.text-md Know-how
-            p.communityDescription.text-sm We created our very own MJPG video server written in C with multi-threading support and GPU video encoding - the fastest streaming solution available to provide the best video quality for PiKVM. We also tested a lot of hardware configurations so that you can be sure devices you assemble will work reliably.
+                    h3.communitySubtitle.text-md Know-how
+                    p.communityDescription.text-sm We created our very own MJPG video server written in C with multi-threading support and GPU video encoding - the fastest streaming solution available to provide the best video quality for PiKVM. We also tested a lot of hardware configurations so that you can be sure devices you assemble will work reliably.

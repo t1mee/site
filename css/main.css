@@ -6,10 +6,6 @@
 	border-radius: 4px;
 } */
 
-form {
-	width: 100%;
-}
-
 .color-white {
 	color: white;
 }
@@ -200,6 +196,9 @@ a.containerSubtitle {
 }
 
 @media (max-width: 992px) {
+	.paramsBanner {
+		padding-bottom: 0;
+	}
 	.paramCard {
 		border-top: 1px solid var(--cs-color-gray);
 	}
@@ -209,26 +208,11 @@ a.containerSubtitle {
 	margin-top: 16px;
 }
 
-.community {
-	display: flex;
-	gap: 36px;
-}
-
 .communityTitle {
 	display: flex;
 	align-items: center;
 	gap: 24px;
 	color: var(--cs-color-main);
-}
-
-.communityItem {
-	margin-top: 16px;
-	margin-bottom: 48px;
-}
-
-.communitySubtitle {
-	color: var(--cs-color-main);
-	margin-bottom: 16px;
 }
 
 .communityDescription {
@@ -244,7 +228,7 @@ a.containerSubtitle {
 }
 
 .footer {
-	padding: 32px 0;
+	padding: 32px;
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -257,8 +241,19 @@ a.containerSubtitle {
 	gap: 28px;
 }
 
+@media (max-width: 992px) {
+	.footerButtons {
+		gap: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	.footerButtons {
+		gap: 28px;
+	}
+}
+
 .darkBtn {
-	box-sizing: content-box;
 	background-color: var(--cs-color-main);
 	color: var(--cs-color-info);
 	border: 2px solid var(--cs-color-info);
@@ -292,11 +287,5 @@ a.containerSubtitle {
 @media (max-width: 992px) {
 	.infoBlock > :nth-last-child(n) {
 		border-top: 1px solid var(--cs-color-gray);
-	}
-}
-
-@media (min-width: 992px) {
-	.interface {
-		/* min-width: 496px; */
 	}
 }
