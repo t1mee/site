@@ -1,7 +1,11 @@
 @media (min-width: 992px) {
-	body {
+	.fullscreen {
 		height: calc(100vh - 70px);
 	}
+}
+
+a {
+	color: var(--cs-color-info);
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -62,7 +66,6 @@
 }
 
 .content {
-	height: 100%;
 	margin-top: 70px;
 }
 
@@ -112,6 +115,9 @@
 		left: 0;
 		padding-top: 24px;
 		padding-bottom: 32px;
+	}
+	.productImg {
+		width: 496px;
 	}
 }
 

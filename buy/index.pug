@@ -1,23 +1,40 @@
-extends ../base.pug
+extends ../components/layout.pug
 
 append vars
 	- title = "Buy PiKVM v3 HAT"
 
 block body
-	div(class="content")
-		div(class="block")
-			h3 Here you can buy PiKVM v3 HAT from our resellers!
-			| Australia: #[a(target="_blank" href="https://core-electronics.com.au/catalogsearch/result/?q=pikvm") Core Electronics] #[br]#[br]
-			| Canada: #[a(target="_blank" href="https://www.pishop.ca/search.php?search_query=pikvm&section=product") PiShop.ca] #[br]#[br]
-			| Czech Republic: #[a(target="_blank" href="https://rpishop.cz/vyhledavani?controller=search&orderby=position&orderway=desc&ssa_submit=&search_query=pikvm") RPishop.cz] #[br]#[br]
-			| Germany: #[a(target="_blank" href="https://www.welectron.com/navi.php?qs=pikvm") Welectron] #[br]#[br]
-			| Greece: #[a(target="_blank" href="https://nettop.gr/index.php/component/uemart_category_id=0/?keyword=pikvm&limitstart=0&option=com_virtuemart&view=category&search=true&virtuemart_category_id=0") Nettop] #[br]#[br]
-			| India: #[a(target="_blank" href="https://robu.in") Robu.in] #[br]#[br]
-			| Netherlands: #[a(target="_blank" href="https://www.elektor.com/catalogsearch/result/?q=pikvm") Elektor] #[br]#[br]
-			| Switzerland: #[a(target="_blank" href="https://www.pi-shop.ch/catalogsearch/result/?q=pikvm") Pi-Shop.ch] #[br]#[br]
-			| United Kingdom: #[a(target="_blank" href="https://shop.pimoroni.com/?q=pikvm") Pimoroni], #[a(target="_blank" href="https://thepihut.com/pages/search-results?q=pikvm") The Pi Hut] #[br]#[br]
-			| United States: #[a(target="_blank" href="https://www.pishop.us/search.php?search_query=pikvm&section=product") PiShop.us], #[a(target="_blank" href="https://cloudfree.shop/?s=pikvm") CloudFree]#[br]#[br]
-			hr
-			| Want to be in this cool list? You run a Pi/electronics store and your country is not listed here?#[br]
-			| #[a(href="mailto:wholesale@hipi.io") Drop us a line] and we will be happy to talk.#[br]
-			| Our goal is to make PiKVM available (locally) in all 195 countries! :)
+	main.content
+		.container-fluid.gradient.h-100.d-flex.align-items-center.justify-content-center.p-4.p-sm-5 
+				.content-size.text-white.row.m-0.m-md-4
+					.col-12.col-md-6
+						h1.m-0.text-lg Product name
+						img.productImg.mt-5(src="/assets/product.png")
+
+					.col-12.col-md-6.mt-5.mt-lg-0
+						h2.m-0.fs-4
+							b Here you can buy PiKVM v3 HAT from our resellers!
+						.mt-3
+							p.fw-bolder.mb-2  Australia: #[a(href="") Core Electronics]
+							p.fw-bolder.mb-2 Canada: #[a(href="") PiShop.ca]
+							p.fw-bolder.mb-2 Czech Republic: #[a(href="") RPishop.cz]
+							p.fw-bolder.mb-2 Germany: #[a(href="") Welectron]
+							p.fw-bolder.mb-2 Greece: #[a(href="") Nettop]
+							p.fw-bolder.mb-2 India: #[a(href="") Robu.in]
+							p.fw-bolder.mb-2 Netherlands: #[a(href="") Elektor]
+							p.fw-bolder.mb-2 Switzerland: #[a(href="") Pi-Shop.ch]
+							p.fw-bolder.mb-2 United Kingdom: #[a(href="") Pimoroni, The Pi Hut]
+							p.fw-bolder United States: #[a(href="") PiShop.us, CloudFree]
+					.col-12.col-md-6
+						p.mt-5.text-sm.color-gray My work on PiKVM takes a lot of time and effort. I'm developing new features, providing user support, testing hardware, admining project's servers, maintaining the package repository and much more. I make a lot of other small things that take up my entire work day :)If you find PiKVM useful or it has saved you a long trip to check on an unresponsive server, you can support my job either regularly or through one time contributions.
+						h2.fw-bolder.fs-4.mt-4 This device has all the features of the DIY version, including:
+						ul.text-sm.color-gray 	
+							li HDMI Full HD capture based on the TC358743 chip (extra low latency ~100ms and many features like compression control).
+							li OTG Keyboard & mouse; Mass Storage Drive emulation.
+							li Ability to simulate "removal and insertion" for USB.
+							li Onboard ATX power control.
+							li Onboard fan controller.
+							li A real-time clock.
+							li RJ-45 and USB serial console port (to manage PiKVM OS or to connect with the server).
+							li No need for soldering or breadboarding. It's a pre-assembled, reliable device which you can use yourself or provide to your clients.
+							li Continued use of PiKVM OS - all the software is fully open.
