@@ -5,22 +5,25 @@ append vars
 
 block body
 	main.content
-		div(class="block")
-			h3
-				| Hello! I'm Maxim Devaev,#[br]
-				| the creator and main developer of PiKVM.#[br]
-				| Thank you for visiting this page!
-			| My work on PiKVM takes a lot of time and effort.
-			| I'm developing new features, providing user support, testing hardware, admining project's servers,
-			| maintaining the package repository and much more. I make a lot of other small things that take up my entire work day :)#[br]
-			| #[br]
-			| If you find PiKVM useful or it has saved you a long trip to check on an unresponsive server, you can support my job
-			| either regularly or through one time contributions.#[br]
-			| #[br]
-			| #[b Thanks to the kind people who support me, PiKVM becomes my 100% full time job!]#[br]
-			| #[br]
-			| As a thank you, each sponsor will be mentioned in the thanks-section on #[a(target="_blank" href=github_link) GitHub] and
-			| in the PiKVM web interface!#[br]
-			| #[br]
-			| With a company and open to a sponsorship? #[a(href=email_link) Mail me!]
-			
+		.container-fluid.gradient.h-100.d-flex.align-items-center.justify-content-center
+			.content-size.text-white.row
+				.col-12.col-md-7
+					h1.m-0.text-lg Hello! I'm Maxim Devaev, the creator and main developer of PiKVM. Thank you for visiting this page!
+					p.mb-0.mt-4.text-sm.color-gray My work on PiKVM takes a lot of time and effort. I'm developing new features, providing user support, testing hardware, admining project's servers, maintaining the package repository and much more. I make a lot of other small things that take up my entire work day :)If you find PiKVM useful or it has saved you a long trip to check on an unresponsive server, you can support my job either regularly or through one time contributions.
+					p.mt-4
+						b Thanks to the kind people who support me, PiKVM becomes my 100% full time job!
+					p.text-sm.color-gray As a thank you, each sponsor will be mentioned in the thanks-section on #[a(href= github_link) GitHub] and in the PiKVM web interface!With a company and open to a sponsorship? #[a(href= email_link) Mail me]!
+				.col-12.col-md-5.mt-5.mt-md-0
+					h3.mb-4.fs-3 Regulary
+					a(href="") #[img(src="/assets/patron.png")]
+					p.text-md.mt-3
+						b  Become a patron on Patreon!
+
+					p.text-sm.color-gray Include honorary role on our #[a(href="#") Discord server!]
+					h3.mb-4.mt-5.fs-3 One time
+
+					a(href="") #[img(src="/assets/donate.png")]
+
+					p.text-md.mt-3 	
+						b Make a one-time contribution through PayPal!
+					p.text-sm.color-gray No paypal.me? Send funds via PayPal to #[b.color-white mdevaev@gmail.com]
