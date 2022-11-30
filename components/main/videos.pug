@@ -1,11 +1,25 @@
-- var videos = ["https://www.youtube.com/embed/dTchVKxx7Fo", "https://www.youtube.com/embed/dTchVKxx7Fo", "https://www.youtube.com/embed/dTchVKxx7Fo"] 
+- var videos = ["https://www.youtube.com/embed/dTchVKxx7Fo", "https://www.youtube.com/embed/dTchVKxx7Fo", "https://www.youtube.com/embed/dTchVKxx7Fo", "https://www.youtube.com/embed/dTchVKxx7Fo"] 
 
 .container-fluid
     .banner.d-flex.flex-column.align-items-center
-        .bannerText.color-secondary
-            h2.containerTitle.text-lg We also made our own ready-made PiKVM V3 on Raspberry Pi 4.
-            h3.containerSubtitle.color-info Watch the video!
-        .row.mt-lg-4 
-            each video in videos
-                iframe.col-lg-4.mt-lg-0.mt-4( width="320" height="178" src=video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
-        a.containerSubtitle.color-info(href="/") See more
+        .content-size.d-flex.flex-column.align-items-center
+            .bannerText.color-secondary
+                h2.containerTitle.text-lg We also made our own ready-made PiKVM V3 on Raspberry Pi 4.
+                h3.containerSubtitle.color-info Watch the video!
+            .videos.scrollbar.pb-4.d-none.d-md-flex
+                .row.mt-lg-4.flex-nowrap
+                    each video in videos
+                        iframe.col-lg-4.mt-lg-0.mt-4( width="320" height="178" src=video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+            .d-flex.d-md-none.flex-column.align-items-center
+                .videos.d-flex.flex-column
+                    each video, index in videos
+                        if index < 3 
+                            iframe.col-lg-4.mt-lg-0.mt-4( width="320" height="178" src=video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+                
+                #videos.collapse.multi-collapse
+                    .videos.d-flex.d-md-none.flex-column
+                        each video, index in videos
+                            if index > 2 
+                                iframe.col-lg-4.mt-lg-0.mt-4( width="320" height="178" src=video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+                    
+                a.containerSubtitle.color-info.navbar-toggler(type='button', data-bs-toggle='collapse', href='#videos', aria-controls='videos', aria-expanded='false') See more
