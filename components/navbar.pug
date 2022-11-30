@@ -15,11 +15,30 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-color-main.fixed-top.py-3
             ul.navbar-nav.mb-2.mb-lg-0.justify-content-between.navList.w-100
                 li.nav-item
                     a.nav-link.color-info.text-md(href="/") About
+                li
+                    a.nav-link.text-white.text-md(data-bs-toggle="collapse" id="products" href="#collapseProducts" role="button" aria-expanded="false" aria-controls="collapseProducts") Products  #[img.arrow(src="/assets/arrow-down.svg")] 
+                     #collapseProducts.collapse.bg-color-main.mb-2.mb-lg-0.mt-2.mt-lg-0
+                        .container-fluid.d-flex.justify-content-center
+                            .content-size.w-100.d-flex.flex-column.flex-md-row
+                                .category.mt-3.mt-md-0
+                                    span.text-white.categoryName Название раздела
+                                    ul.categories.mt-3.ps-0.color-white.pt-0.pt-lg-4
+                                        li PiKVM V3
+                                        li PiKVM V4 mini
+                                        li PiKVM V4 plus
+                                .category.ms-0.ms-md-5.mt-3.mt-md-0
+                                    span.text-white.categoryName Название раздела
+                                    ul.categories.mt-3.ps-0.color-white.pt-0.pt-lg-4
+                                        li PiKVM V3
+                                        li PiKVM V4 mini
+                                        li PiKVM V4 plus
                 each nav in nav_links 
                     li
                         a.nav-link.text-white.text-md(href= nav.url)= nav.title
             .d-flex.justify-content-center
                 a(target="_blank" href=github_link): img(src="/assets/github.svg" alt="github")
                 a.social(target="_blank" href=reddit_link): img(src="/assets/reddit.svg" alt="github")
+
+
             //li(class="right")
                 a(class="link" href=email_link) Email Us
