@@ -83,6 +83,14 @@
 	max-width: 620px;
 }
 
+@media (min-width: 992px) {
+	.downloadTitle {
+		height: 5.5rem;
+	}
+	.downloadTitle > h2 {
+		gap: 20px;
+	}
+}
 .containerSubtitle {
 	text-align: center;
 	font-size: 24px;
