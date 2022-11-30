@@ -1,4 +1,4 @@
-extends ../base.pug
+extends ../components/layout.pug
 
 append vars
 	- title = "PiKVM / Donate - Open and inexpensive DIY IP-KVM on Raspberry Pi"
@@ -23,19 +23,4 @@ block body
 			| in the PiKVM web interface!#[br]
 			| #[br]
 			| With a company and open to a sponsorship? #[a(href=email_link) Mail me!]
-			hr
-			table
-				tr
-					td
-						h4 Regulary
-						+img("patreon.jpg", 200, "https://patreon.com/pikvm")
-						| #[br]
-						| #[b Become a patron on Patreon!]#[br]
-						| #[sub Include honorary role on our #[a(target="_blank" href=discord_link) Discord server!]]
-					td
-						h4 One time
-						+img("paypal.png", 200, "https://paypal.me/pikvm")
-						| #[br]
-						| #[b Make a one-time contribution through PayPal!]#[br]
-						| #[sub No paypal.me? Send funds via PayPal to #[b mdevaev@gmail.com]]
-
+			
