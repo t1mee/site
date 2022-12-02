@@ -20,6 +20,51 @@ mixin product(img, title, description, link)
 			button.btn.btnContained.mt-4
 				span.color-white.buyBtn Buy now
 
+- var nav_links = [{title: "Documentation", url: "https://docs.pikvm.org"}, {title: "Support", url: "/support"}, {title: "Download", url: "/download"}, {title: "Donate", url: "/donate"}]
+
+- var github_link = "https://github.com/pikvm/pikvm"
+- var discord_link = "https://discord.gg/bpmXfz5"
+- var reddit_link = "https://reddit.com/r/pikvm"
+- var email_link = "mailto:mdevaev@gmail.com"
+
+
+mixin navbar(currentPath)
+	nav.navbar.navbar-expand-lg.navbar-dark.bg-color-main.fixed-top.py-3
+		.container-fluid.justify-content-end
+			button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarSupportedContent.collapse.navbar-collapse.justify-content-center
+				.content-size.w-100.d-flex.flex-column.flex-lg-row.justify-content-between
+					a.navbar-brand(href='#') #[img(src="/assets/logo.svg")]
+					ul.navbar-nav.mb-2.mb-lg-0.justify-content-between.w-100.mx-0.mx-md-3
+						li.d-flex.align-items-center.nav-item
+							a.nav-link.text-md(class=(currentPath === "about" ? "color-info" : "text-white") href="/") About
+						li.d-flex.align-items-center
+							a.nav-link.text-md(class=(currentPath === "buy" ? "color-info" : "text-white") data-bs-toggle="collapse" id="products" href="#collapseProducts" role="button" aria-expanded="false" aria-controls="collapseProducts") Products  #[img.arrow(src="/assets/arrow-down.svg")] 
+							#collapseProducts.collapse.bg-color-main.mb-2.mb-lg-0.mt-2.mt-lg-0
+								.container-fluid.d-flex.justify-content-center
+									.content-size.w-100.d-flex.flex-column.flex-md-row
+										.category.mt-3.mt-md-0
+											span.text-white.categoryName Название раздела
+											ul.categories.mt-3.ps-0.color-white.pt-0.pt-lg-4
+												li PiKVM V3
+												li PiKVM V4 mini
+												li PiKVM V4 plus
+										.category.ms-0.ms-md-5.mt-3.mt-md-0
+											span.text-white.categoryName Название раздела
+											ul.categories.mt-3.ps-0.color-white.pt-0.pt-lg-4
+												li PiKVM V3
+												li PiKVM V4 mini
+												li PiKVM V4 plus
+						each nav in nav_links 
+							li.d-flex.align-items-center
+								a.nav-link.text-md(class=(currentPath === nav.url ? "color-info" : "text-white") href= nav.url)= nav.title
+					.d-flex.justify-content-center.ms-0.ms-md-3
+						a.d-flex.align-items-center(target="_blank" href=github_link): img(src="/assets/github.svg" alt="github" width="75px" height="20px")
+						a.d-flex.align-items-center.social(target="_blank" href=reddit_link): img(src="/assets/reddit.svg" alt="github" width="75px" height="20px")
+
+
+
 block vars
 
 html(lang="en")
@@ -53,7 +98,6 @@ html(lang="en")
 				| main();
 
 	body
-		include navbar.pug	
 		block body
 		
 
