@@ -5,7 +5,7 @@
     .banner.d-flex.justify-content-center
         .content-size
             .d-none.d-md-block.mb-5
-                h2.m-0.color-white.text-center Our main product
+                h2.text-lg.m-0.color-white.text-center Our main product
                 .row.mt-5.pb-4
                     img.mainProduct.col-12.col-md-6.mt-4.mt-md-0(src= mainProduct.img) 
                     .col-12.col-md-6     
@@ -19,7 +19,7 @@
                                 span.color-white.buyBtn Buy now
 
             .d-flex.flex-column
-                h2.m-0.color-white.text-center Our products
+                h2.text-lg.m-0.color-white.text-center Other products
                 .products.row
                     each product in products
                         +product(product.img, product.title, product.description, product.link)

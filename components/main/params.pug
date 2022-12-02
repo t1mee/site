@@ -3,11 +3,11 @@
 .container-fluid.gradient 
     .banner.d-flex.justify-content-center.paramsBanner
         .w-100.content-size
-            h2.color-white.text-center Fully-featured and modern IP-KVM
+            h2.text-lg.color-white.text-center Fully-featured and modern IP-KVM
             .params.mt-5.row
                 each param in params
                     .paramCard.col-12.col-lg-6.px-0.px-lg-3.py-lg-4.py-4 
-                        h3.color-white= param.title
+                        h3.text-md.color-white= param.title
                         p.paramDescription.color-gray= param.description
                 .paramCard.col-12.px-0.px-lg-3.py-lg-4.py-4  
                         h3.color-white Macro scripts
